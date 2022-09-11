@@ -32,7 +32,7 @@
 
                                         <td>
                                     
-                                            <a href="{{ Route('catagory.update',$row->id) }}"
+                                            <a href="{{ Route('catagory.edit',$row->id) }}"
                                                 class="btn btn-info btn-sm">Edit</a>
                                             <!-- delete option -->
                                             {{-- <form action="" method="POST">

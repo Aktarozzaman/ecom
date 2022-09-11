@@ -25,5 +25,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/catagory/index',[CatagoryController::class, 'index'])->name('catagory.index');
 Route::get('/catagory/create',[CatagoryController::class, 'create'])->name('catagory.create');
 Route::post('/catagory/store',[CatagoryController::class, 'store'])->name('catagory.store');
+Route::get('/catagory/edit/{id}',[CatagoryController::class, 'edit'])->name('catagory.edit');
+Route::post('/catagory/update/{id}',[CatagoryController::class, 'update'])->name('catagory.update');
 
-Route::get('catagory/update/{id}',[CatagoryController::class,'update'])->name('catagory.update');
+
