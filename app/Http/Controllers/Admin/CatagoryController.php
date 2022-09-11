@@ -48,10 +48,10 @@ class CatagoryController extends Controller
         return redirect()->back()->with('sucess', 'Sucessfully inserted');
     }
     //edit mathod
-    public function update( Request $request,$id)
-    {
+    // public function update( Request $request,$id)
+    // {
        
     
 
-    }
+    // }
 }
