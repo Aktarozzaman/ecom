@@ -44,9 +44,13 @@ class CatagoryController extends Controller
         $catagory->catagory_name=$request->catagory_name;
         $catagory->catagory_slug=Str::of($request->catagory_slug)->slug('-');
        $catagory->save();
-       
 
-        return redirect()->back()->with('sucess', 'Sucessfully inserted');
+
+    //    $notification=array('message'=>'Catagory Inserted','alert-type'=>'success');
+
+    //    return redirect()->back()->with('$notification');
+
+         return redirect()->back()->with('success', 'Successfully inserted');
     }
     public function edit($id)
     {
@@ -72,6 +76,16 @@ class CatagoryController extends Controller
       return redirect()->back()->with('sucess', 'Sucessfully Updated');
     
     }
+    public function distroy($id)
+    {
+        //DB::table('catagories')->where('id',$id)->delete();
+        //$catagory=Catagory::where('id',$id);
+        //$catagory->delete();
+        Catagory::destroy($id);
+        
+        return redirect()->back()->with('success', 'Successfully Deleted');
+    }
+    
 
     
 }

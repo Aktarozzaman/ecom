@@ -3,17 +3,9 @@
 use App\Models\Catagory;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CatagoryController;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use App\Http\Controllers\Admin\subcatagoryController;
+use App\Http\Controllers\Admin\postController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,11 +13,28 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+ 
+    return redirect('/home');
+})->middleware(['auth', 'signed'])->name('verification.verify');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/catagory/index',[CatagoryController::class, 'index'])->name('catagory.index');
 Route::get('/catagory/create',[CatagoryController::class, 'create'])->name('catagory.create');
 Route::post('/catagory/store',[CatagoryController::class, 'store'])->name('catagory.store');
 Route::get('/catagory/edit/{id}',[CatagoryController::class, 'edit'])->name('catagory.edit');
 Route::post('/catagory/update/{id}',[CatagoryController::class, 'update'])->name('catagory.update');
+Route::get('/catagory/delete/{id}',[CatagoryController::class, 'distroy'])->name('catagory.delete');
 
+//subcatagory croud
+Route::get('/subcatagory/index',[subcatagoryController::class, 'index'])->name('subcatagory.index');
+Route::get('/subcatagory/create',[subcatagoryController::class, 'create'])->name('subcatagory.create'); 
+Route::post('/subcatagory/store',[subcatagoryController::class, 'store'])->name('subcatagory.store');
+Route::get('/subcatagory/edit/{id}',[subcatagoryController::class, 'edit'])->name('subcatagory.edit');
+Route::post('/subcatagory/update/{id}',[subcatagoryController::class, 'update'])->name('subcatagory.update');
+Route::get('/subcatagory/delete/{id}',[subcatagoryController::class, 'distroy'])->name('subcatagory.delete');
 
+//post croud
+Route::get('/post/create',[postController::class, 'create'])->name('post.create');
+Route::post('/post/store',[postController::class, 'store'])->name('post.store');

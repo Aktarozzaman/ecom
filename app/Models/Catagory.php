@@ -13,4 +13,12 @@ class Catagory extends Model
         'catagory_slug',
         
     ];
+    //capital latter in first letter 
+    
+    public function setCatagoryNameAttribute($value)
+
+    {
+        $this->attributes['catagory_name']=ucfirst($value);
+       
+    }
 }

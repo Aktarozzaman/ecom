@@ -38,20 +38,11 @@
                                     </span>
                                 @enderror
 
-                              
- 
-
-
                             </div>
-
 
                             <button type="submit" class="btn btn-sm btn-primary">Updated</button>
 
                         </form>
-
-
-    
-
 
                     </div>
                 </div>
