@@ -65,41 +65,41 @@
     </div>
   </footer> --}}
 
-        // <!-- Control Sidebar -->
+        <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
             <!-- Control sidebar content goes here -->
         </aside>
-        // <!-- /.control-sidebar -->
+         <!-- /.control-sidebar -->
     </div>
-    // <!-- ./wrapper -->
+    <!-- ./wrapper -->
 
-    // <!-- jQuery -->
+    <!-- jQuery -->
     <script src="{{ asset('backend/plugins/jquery/jquery.min.js') }}"></script>
-    // <!-- jQuery UI 1.11.4 -->
+    <!-- jQuery UI 1.11.4 -->
     <script src="{{ asset('backend/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
-    // <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
         $.widget.bridge('uibutton', $.ui.button)
     </script>
-    // <!-- Bootstrap 4 -->
+    <!-- Bootstrap 4 -->
     <script src="{{ asset('backend/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    // <!-- ChartJS -->
+     <!-- ChartJS -->
     <script src="{{ asset('backend/plugins/chart.js/Chart.min.js') }}"></script>
-    // <!-- Sparkline -->
+     <!-- Sparkline -->
     <script src="{{ asset('backend/plugins/sparklines/sparkline.js') }}"></script>
-    // <!-- JQVMap -->
+     <!-- JQVMap -->
     <script src="{{ asset('backend/plugins/jqvmap/jquery.vmap.min.js') }}"></script>
     <script src="{{ asset('backend/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
-    // <!-- jQuery Knob Chart -->
+     <!-- jQuery Knob Chart -->
     <script src="{{ asset('backend/plugins/jquery-knob/jquery.knob.min.js') }}"></script>
-    // <!-- daterangepicker -->
+     <!-- daterangepicker -->
     <script src="{{ asset('backend/plugins/moment/moment.min.js') }}"></script>
     <script src="{{ asset('backend/plugins/daterangepicker/daterangepicker.js') }}"></script>
-    // <!-- Tempusdominus Bootstrap 4 -->
+    /<!-- Tempusdominus Bootstrap 4 -->
     <script src="{{ asset('backend/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}"></script>
-    // <!-- Summernote -->
+     <!-- Summernote -->
     <script src="{{ asset('backend/plugins/summernote/summernote-bs4.min.js') }}"></script>
-    // <!-- overlayScrollbars -->
+     <!-- overlayScrollbars -->
     <script src="{{ asset('backend/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('backend/dist/js/adminlte.js') }}"></script>
@@ -107,12 +107,12 @@
     <script src="{{ asset('backend/dist/js/demo.js') }}"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="{{ asset('backend/dist/js/pages/dashboard.js') }}"></script>
-    // <!-- DataTables -->
+     <!-- DataTables -->
     <link rel="stylesheet" href="{{ asset('backend/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
     <link rel="stylesheet"
         href="{{ asset('backend/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
-    // <!-- DataTables  & Plugins -->
+     <!-- DataTables  & Plugins -->
     <script src="{{ asset('backend/plugins/datatables/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('backend/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
     <script src="{{ asset('backend/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
@@ -127,7 +127,7 @@
     <script src="{{ asset('backend/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
     <script rel="stylesheet" type="text/javascript" src="{{ asset('backend/plugins/toastr/toastr.min.js') }}"></script>
     <script src="{{ asset('backend/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
-    // <!-- Summernote -->
+     <!-- Summernote -->
     <script src="{{ asset('backend/plugins/summernote-bs4.min.js') }}"></script>
     @stack('script')
     {{-- Anything delete --}}
@@ -173,7 +173,7 @@
                 });
         });
     </script>
-    // <!-- Page specific script -->
+     <!-- Page specific script -->
 <script>
   $(function () {
     // Summernote
