@@ -4,7 +4,7 @@
 <div class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-          <a href="{{ url('/') }}"><b>Admin</b>LTE</a>
+          <a href="{{ url('/') }}"><b>Better Think BD</b></a>
         </div>
         <!-- /.login-logo -->
         <div class="card">
