@@ -2,7 +2,7 @@
     <!-- Brand Logo -->
     <a href="" class="brand-link">
         <img src="{{ asset('backend/dist/img/AdminLTELogo1.png') }}" alt="AdminLTE Logo"
-            class="brand-image img-circle elevation-3" style="opacity:0.8">
+            class="brand-image img-circle elevation-5" style="opacity:8">
         <span class="brand-text font-weight-light"><b>Better Think BD</b></span>
     </a>
     <!-- Sidebar -->
@@ -14,7 +14,7 @@
                 {{-- must 128*128 --}}
             </div>
             <div class="info">
-                <a href="#" class="d-block">Aktarozzaman</a>
+                <a href="#" class="d-block">{{ Auth::user()->name }}</a>
             </div>
         </div>
 
@@ -134,6 +134,13 @@
                   </ul>
 
                 </li>
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-user-plus"></i>
+                    <p>
+                        View Users
+                        
+                    </p>
+                </a>
 
                 <li class="nav-header">LABELS</li>
                 <li class="nav-item">
