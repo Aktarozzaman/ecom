@@ -12,7 +12,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                            <li class="breadcrumb-item active">SubCatagory Tables</li>
+                            <li class="breadcrumb-item active">All User</li>
                         </ol>
                     </div>
                 </div>
@@ -26,48 +26,47 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">SubCatagory with minimal features & hover style</h3>
+                                <h3 class="card-title">All User with minimal features & hover style</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                
+
                                 <table id="example1" class="table table-bordered table-hover">
                                     <thead>
                                         <tr>
-                                            
+
                                             <td>Id</td>
-                                            <td>Catagory</td>
-                                            <td>SubCatagory name</td>
-                                            <td>SubCatagory Slug</td>
+                                            <td>User_name</td>
+                                            <td>Email</td>
+                                            <td>Point</td>
                                             <td>Action</td>
                                         </tr>
                                     </thead>
-        
+
                                     <tbody>
+
                                         @foreach ($data as $key => $row)
                                             <tr>
-                                                <td>{{ ++$key }}</td>
-                                                <td>{{ $row->catagory->catagory_name }}</td>
-                                                <td>{{ $row->subcatagory_name }}</td>
-                                                <td>{{ $row->subcatagory_slug }}</td>
-        
+                                                <td>{{ $row->id }}</td>
+                                                <td>{{ $row->name }}</td>
+                                               <td>{{ $row->email }}</td>
+                                               <td>{{ $row->point }}</td>
                                                 <td>
-                                            
-                                                    <a href="{{ Route('subcatagory.edit',$row->id) }}"
+                                                    <a href="{{ Route('subcatagory.edit', $row->id) }}"
                                                         class="btn btn-info btn-sm"><i class="fa fa-edit"></i></a>
-        
-                                                
-                                                    <a href="{{ Route('subcatagory.delete',$row->id) }}"
-                                                        class="btn btn-danger btn-sm delete" ><i class="fa fa-trash"></i></a>
-        
+
+
+                                                    <a href="{{ Route('subcatagory.delete', $row->id) }}"
+                                                        class="btn btn-danger btn-sm delete"><i class="fa fa-trash"></i></a>
+
                                                 </td>
                                             </tr>
                                         @endforeach
-        
-                                    </tbody> 
-        
+
+                                    </tbody>
+
                                 </table>
-                                       
+
                                 </table>
                             </div>
                             <!-- /.card-body -->
@@ -91,5 +90,4 @@
     <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
-    
 @endsection

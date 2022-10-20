@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\CatagoryController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\Admin\subcatagoryController;
 use App\Http\Controllers\Admin\postController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\userController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,7 +21,7 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
     return redirect('/home');
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/catagory/index',[CatagoryController::class, 'index'])->name('catagory.index');
 Route::get('/catagory/create',[CatagoryController::class, 'create'])->name('catagory.create');
 Route::post('/catagory/store',[CatagoryController::class, 'store'])->name('catagory.store');
@@ -38,3 +40,6 @@ Route::get('/subcatagory/delete/{id}',[subcatagoryController::class, 'distroy'])
 //post croud
 Route::get('/post/create',[postController::class, 'create'])->name('post.create');
 Route::post('/post/store',[postController::class, 'store'])->name('post.store');
+//user croud
+Route::get('/user/details',[userController::class, 'userindex'])->name('user.index');
+

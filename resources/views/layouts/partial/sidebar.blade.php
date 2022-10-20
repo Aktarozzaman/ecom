@@ -14,7 +14,7 @@
                 {{-- must 128*128 --}}
             </div>
             <div class="info">
-                <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+                <a href="#" class="d-block"><b>{{ Auth::user()->name }}</b></a>
             </div>
         </div>
 
@@ -76,102 +76,123 @@
                         </li>
                         {{-- user dashboard --}}
                         <li class="nav-item">
-                          <a href="#" class="nav-link ">
-                              <i class="nav-icon fas fa-copy"></i>
-                              <p>post
-                                  <i class="fas fa-angle-left right"></i>
-                              </p>
+                            <a href="#" class="nav-link ">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>post
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
 
-                          </a>
+                            </a>
 
-                          <ul class="nav nav-treeview">
-                              <li class="nav-item">
-                                  <a href="{{ route('post.create') }}" class="nav-link">
-                                      <i class="far fa-circle nav-icon"></i>
-                                      <p>Create post</p>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('post.create') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Create post</p>
 
-                                  </a>
-                              </li>
-                              <li class="nav-item">
-                                  <a href="{{ route('catagory.index') }}" class="nav-link">
-                                      <i class="far fa-circle nav-icon"></i>
-                                      <p>Menage post</p>
-                                  </a>
-                              </li>
-                          </ul>
-                      </li>
-                      {{-- end user dashboard --}}
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('catagory.index') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Menage post</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        {{-- end user dashboard --}}
                     </ul>
 
                     {{-- end catagory dashboard --}}
                     <ul class="nav-treeview">
 
-                      <li class="nav-item">
-                          <a href="#" class="nav-link ">
-                              <i class="nav-icon fas fa-copy"></i>
-                              <p>Sub Catagory
-                                  <i class="fas fa-angle-left right"></i>
-                              </p>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>Sub Catagory
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
 
-                          </a>
+                            </a>
 
-                          <ul class="nav nav-treeview">
-                              <li class="nav-item">
-                                  <a href="{{ route('subcatagory.create') }}" class="nav-link">
-                                      <i class="far fa-circle nav-icon"></i>
-                                      <p>Add SubCatagorys</p>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('subcatagory.create') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add SubCatagorys</p>
 
-                                  </a>
-                              </li>
-                              <li class="nav-item">
-                                  <a href="{{ route('subcatagory.index') }}" class="nav-link">
-                                      <i class="far fa-circle nav-icon"></i>
-                                      <p>All SubCatagorys</p>
-                                  </a>
-                              </li>
-                          </ul>
-                      </li>
-                  </ul>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('subcatagory.index') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>All SubCatagorys</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">
+                                <i class="nav-icon fas fa-user-plus"></i>
+                                <p>View User
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
 
-                </li>
-                <a href="#" class="nav-link">
-                    <i class="nav-icon fas fa-user-plus"></i>
-                    <p>
-                        View Users
-                        
-                    </p>
-                </a>
+                            </a>
 
-                <li class="nav-header">LABELS</li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon far fa-circle text-danger"></i>
-                        <p class="text">Important</p>
-                    </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('subcatagory.create') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add Users</p>
+
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('user.index') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>All Users</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon far fa-circle text-danger"></i>
-                        <p>Warning</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('password.request') }}" class="nav-link">
-                        <i class="nav-icon far fa-circle text-warning"></i>
-                        <p>Password Chennge</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('logout') }}" class="nav-link"
-                        onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
-                        <i class="nav-icon far fa-circle text-info"></i>
-                        <p>Logout</p>
-                        <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            {{ csrf_field() }}
-                        </form>
-                    </a>
-                </li>
-            </ul>
+
+
+                        <li class="nav-header">LABELS</li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-circle text-danger"></i>
+                                <p class="text">Important</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-circle text-danger"></i>
+                                <p>Warning</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('password.request') }}" class="nav-link">
+                                <i class="nav-icon far fa-circle text-warning"></i>
+                                <p>Password Chennge</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('logout') }}" class="nav-link"
+                                onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                                <i class="nav-icon far fa-circle text-info"></i>
+                                <p>Logout</p>
+                                <form id="frm-logout" action="{{ route('logout') }}" method="POST"
+                                    style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </a>
+                        </li>
+                    </ul>
         </nav>
         <!-- /.sidebar-menu -->
     </div>

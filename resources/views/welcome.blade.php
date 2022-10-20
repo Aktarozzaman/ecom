@@ -1,29 +1,4 @@
-{{-- <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-<body class="antialiased">
-    <div
-        class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-        @if (Route::has('login'))
-            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                @auth
-                    <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 "><b>Home</b></a>
-                @else
-                    <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 "><b>Log in</b></a>
-
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}"
-                            class="ml-4 text-sm text-gray-700 dark:text-gray-500 "><b>Register</b></a>
-                    @endif
-
-                @endauth
-            </div>
-        @endif
-
-    </div>
-</body>
-
-</html> --}}
 <!DOCTYPE html>
 <html>
 
@@ -173,10 +148,8 @@
                 <a href="#">Link 3</a>
             </div>
         </div>
-        <a>
-            <input type="text" name="search" placeholder="Search..">
-
-        </a>
+        <!-- Navbar Search -->
+        
         <a href="#about">About</a>
         @if (Route::has('login'))
             @auth
