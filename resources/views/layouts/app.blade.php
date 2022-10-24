@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>E-Commerce | Dashboard</title>
+    <title>Better Think BD| Dashboard</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -26,6 +26,9 @@
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="{{ asset('backend/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
     <!-- Daterange picker -->
+    {{-- rel icon --}}
+    <link rel="icon" type="image/png"  sizes="34x34" href="{{ asset('backend/dist/img/logo circle.jpg') }}">
+
     <link rel="stylesheet"
         href="{{ asset('backend/plugins/daterangepicker/daterangepicker.css"') }}>
 
@@ -58,21 +61,23 @@
 
 
         <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2022 <a href="#"> Aktar & Shafayat.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 1.0.0
-    </div>
-  </footer>
+        <footer class=" bg-dark text-center text-white">
+
+            <strong>Copyright &copy; 2022 <a href="#"> Aktar & Shafayat.io</a>.</strong>
+            All rights reserved.
+            <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 1.0.0
+            </div>
+
+        </footer>
 
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
+
         </aside>
         <!-- /.control-sidebar -->
     </div>
-    <!-- ./wrapper -->
+
 
     <!-- jQuery -->
     <script src="{{ asset('backend/plugins/jquery/jquery.min.js') }}"></script>

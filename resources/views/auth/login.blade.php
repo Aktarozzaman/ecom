@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<link rel="icon" href="#" type="{{ asset('backend/dist/Adminlogo.png') }}">
+
     <div class="hold-transition login-page bg-color">
         <nav class="navbar" style="background-color: #baaad4;">
             <div class="login-box">

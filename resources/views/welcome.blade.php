@@ -1,12 +1,15 @@
- <!DOCTYPE html>
- <html lang="en">
 
+ <!DOCTYPE html>
+ 
+ <html lang="en">
+    
  <head>
+    @extends('layouts.app')
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Better Think BD</title>
-     <link rel="icon" href="#" type="{{ asset('backend/dist/img/Adminlogo.png') }}">
+     <link rel="icon" type="image/png"  sizes="34x34" href="{{ asset('backend/dist/img/logo circle.jpg') }}">
      <link rel="stylesheet" href="{{ asset('forntend/css/custom.css') }}">
      <link rel="stylesheet" href="{{ asset('forntend/css/bootstrap.min.css') }}">
  </head>
@@ -70,45 +73,9 @@
              </div>
 
          </div>
-         <footer class="bg-dark text-center text-white">
-             <!-- Grid container -->
-             <div class="container p-4 pb-0">
-                 <!-- Section: Social media -->
-                 <section class="mb-4">
-                     <!-- Facebook -->
-                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                             class="fa-brands fa-facebook-f"></i></a>
-
-                     <!-- Twitter -->
-                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                             class="fa-brands fa-square-twitter"></i></a>
-
-                     <!-- Google -->
-                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                             class="fab fa-google"></i></a>
-
-                     <!-- Instagram -->
-                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                             class="fab fa-instagram"></i></a>
-
-                     <!-- Linkedin -->
-                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                             class="fab fa-linkedin-in"></i></a>
-
-                     <!-- Github -->
-                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                             class="fab fa-github"></i></a>
-                 </section>
-                 <!-- Section: Social media -->
-             </div>
-             <!-- Grid container -->
-
-             <!-- Copyright -->
-             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                 © 2020 Copyright:
-                 <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-             </div>
-             <!-- Copyright -->
+         <footer >
+            <footer class="main-footer">
+               
          </footer>
      </footer>
      <script defer src="https://friconix.com/cdn/friconix.js"></script>
