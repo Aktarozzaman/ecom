@@ -172,21 +172,7 @@ $(function () {
     options: salesChartOptions
   })
 
-  // Donut Chart
-  var pieChartCanvas = $('#sales-chart-canvas').get(0).getContext('2d')
-  var pieData = {
-    labels: [
-      'Instore Sales',
-      'Download Sales',
-      'Mail-Order Sales'
-    ],
-    datasets: [
-      {
-        data: [30, 12, 20],
-        backgroundColor: ['#f56954', '#00a65a', '#f39c12']
-      }
-    ]
-  }
+  
   var pieOptions = {
     legend: {
       display: false

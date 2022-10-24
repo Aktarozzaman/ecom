@@ -1,188 +1,121 @@
+ <!DOCTYPE html>
+ <html lang="en">
 
-<!DOCTYPE html>
-<html>
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Better Think BD</title>
+     <link rel="icon" href="#" type="{{ asset('backend/dist/img/Adminlogo.png') }}">
+     <link rel="stylesheet" href="{{ asset('forntend/css/custom.css') }}">
+     <link rel="stylesheet" href="{{ asset('forntend/css/bootstrap.min.css') }}">
+ </head>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial
-        }
+ <body>
+     <header>
+         <div class="header-logo">
+             <img src="{{ asset('forntend/img/Logo_Blue_text-removebg-preview.png') }}" alt="">
+         </div>
+         <div class="background-img">
 
-        .topnav {
-            overflow: hidden;
-            background-color: #333;
-        }
+             <div class="sticky-md-top">
+                 <div class="header info-item">
 
-        .topnav a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
 
-        .active {
-            background-color: #04AA6D;
-            color: white;
-        }
+                     <ul>
+                         <li><a href="">Home</a></li>
+                         <li><a href="">Service</a></li>
+                         <li><a href="">about us</a></li>
+                         <li><a href="">Blog</a></li>
+                     </ul>
 
-        .topnav .icon {
-            display: none;
-        }
+                     <div class="loging-items">
+                         <ul>
+                             <li><a href=""><i class="fi-xwluxl-magnifying-glass-wide"></i></a></li>
+                             <li>
+                                 @if (Route::has('login'))
+                                     @auth
+                                         <a href="{{ url('/home') }}">Home</a>
+                                     @else
+                                         <a href="{{ route('login') }}">Log in</a>
 
-        .dropdown {
-            float: left;
-            overflow: hidden;
-        }
+                                         @if (Route::has('register'))
+                                             <a href="{{ route('register') }}">Register</a>
+                                         @endif
 
-        .dropdown .dropbtn {
-            font-size: 17px;
-            border: none;
-            outline: none;
-            color: white;
-            padding: 14px 16px;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 0;
-        }
+                                     @endauth
+                                 @endif
+                             </li>
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
+                         </ul>
+                     </div>
+                 </div>
+             </div>
 
-        .dropdown-content a {
-            float: none;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
+         </div>
+     </header>
+     <!-- /////////////////header end///////////////////////////// -->
 
-        .topnav a:hover,
-        .dropdown:hover .dropbtn {
-            background-color: #555;
-            color: white;
-        }
+     <footer>
+         <div class="footer-brand-logo">
+             <div class="brand-list">
+                 <ul>
+                     <li><img src="{{ asset('forntend/img/1.jpg') }}" alt=""></li>
+                     <li><img src="{{ asset('forntend/img/2.png') }}" alt=""></li>
+                     <li><img src="{{ asset('forntend/img/3.jpg') }}" alt=""></li>
+                     <li><img src="{{ asset('forntend/img/4.png') }}" alt=""></li>
+                     <li><img src="{{ asset('forntend/img/5.png') }}" alt=""></li>
+                     <li><img src="{{ asset('forntend/img/7.png') }}" alt=""></li>
+                 </ul>
+             </div>
 
-        .dropdown-content a:hover {
-            background-color: #ddd;
-            color: black;
-        }
+         </div>
+         <footer class="bg-dark text-center text-white">
+             <!-- Grid container -->
+             <div class="container p-4 pb-0">
+                 <!-- Section: Social media -->
+                 <section class="mb-4">
+                     <!-- Facebook -->
+                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                             class="fa-brands fa-facebook-f"></i></a>
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+                     <!-- Twitter -->
+                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                             class="fa-brands fa-square-twitter"></i></a>
 
-        @media screen and (max-width: 600px) {
+                     <!-- Google -->
+                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                             class="fab fa-google"></i></a>
 
-            .topnav a:not(:first-child),
-            .dropdown .dropbtn {
-                display: none;
-            }
+                     <!-- Instagram -->
+                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                             class="fab fa-instagram"></i></a>
 
-            .topnav a.icon {
-                float: left;
-                display: block;
-            }
-        }
+                     <!-- Linkedin -->
+                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                             class="fab fa-linkedin-in"></i></a>
 
-        @media screen and (max-width: 600px) {
-            .topnav.responsive {
-                position: relative;
-            }
+                     <!-- Github -->
+                     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                             class="fab fa-github"></i></a>
+                 </section>
+                 <!-- Section: Social media -->
+             </div>
+             <!-- Grid container -->
 
-            .topnav.responsive .icon {
-                position: absolute;
-                right: 0;
-                top: 0;
-            }
+             <!-- Copyright -->
+             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                 © 2020 Copyright:
+                 <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+             </div>
+             <!-- Copyright -->
+         </footer>
+     </footer>
+     <script defer src="https://friconix.com/cdn/friconix.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.2/umd/popper.min.js"
+         integrity="sha512-aDciVjp+txtxTJWsp8aRwttA0vR2sJMk/73ZT7ExuEHv7I5E6iyyobpFOlEFkq59mWW8ToYGuVZFnwhwIUisKA=="
+         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="{{ asset('forntend/js/bootstrap.min.js') }}"></script>
+ </body>
 
-            .topnav.responsive a {
-                float: none;
-                display: block;
-                text-align: left;
-            }
-
-            .topnav.responsive .dropdown {
-                float: none;
-            }
-
-            .topnav.responsive .dropdown-content {
-                position: relative;
-            }
-
-            .topnav.responsive .dropdown .dropbtn {
-                display: block;
-                width: 100%;
-                text-align: left;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <div class="topnav" id="myTopnav">
-        <a href="#home" class="active">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-
-        <div class="dropdown">
-            <button class="dropbtn">Dropdown
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
-        </div>
-        <!-- Navbar Search -->
-        
-        <a href="#about">About</a>
-        @if (Route::has('login'))
-            @auth
-                <a href="{{ url('/home') }}"><b>Home</b></a>
-            @else
-                <a href="{{ route('login') }}"><b>Log in</b></a>
-
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}"><b>Register</b></a>
-                @endif
-
-            @endauth
-        @endif
-        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-    </div>
-
-    <div style="padding-left:16px">
-        <h2>Responsive Topnav with Dropdown</h2>
-        <p>Resize the browser window to see how it works.</p>
-        <p>Hover over the dropdown button to open the dropdown menu.</p>
-    </div>
-
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-    </script>
-
-</body>
-
-</html>
+ </html>

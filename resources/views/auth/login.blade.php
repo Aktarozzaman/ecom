@@ -1,16 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
+<link rel="icon" href="#" type="{{ asset('backend/dist/Adminlogo.png') }}">
     <div class="hold-transition login-page bg-color">
         <nav class="navbar" style="background-color: #baaad4;">
             <div class="login-box">
                 <a href="" class="brand-link">
-                    <img src="{{ asset('backend/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo"
-                        class="brand-image img-circle elevation-8" style="opacity:100">
-                        <span class="brand-text font-weight-light fas fa-align-left"><b>Better Think BD</b></span>
+            
+                        <span class="brand-text font-weight-light fas fa-align-left brand-logo"> <img src="{{ asset('backend/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo"
+                            class="brand-image img-circle elevation-0" style="opacity:100"><b>Better Think BD</b></span>
                 </a>
-                
-                
+
                 <!-- /.login-logo -->
                 <div class="card">
                     <div class="card-body login-card-body">
