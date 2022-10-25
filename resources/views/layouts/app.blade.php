@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Better Think BD| Dashboard</title>
+    <title>Better Think BD</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"

@@ -36,17 +36,18 @@
                          <ul>
                              <li><a href=""><i class="fi-xwluxl-magnifying-glass-wide"></i></a></li>
                              <li>
-                                 @if (Route::has('login'))
-                                     @auth
-                                         <a href="{{ url('/home') }}">Home</a>
-                                     @else
-                                         <a href="{{ route('login') }}">Log in</a>
+                                @if (Route::has('login'))
+                                @auth
+                                    <a href="{{ url('/home') }}">Home</a>
+                                @else
+                                    @if (Route::has('register'))
+                                        <a href="{{ route('register') }}">Sign up</a>
+                                    @endif
+                                    <a href="{{ route('login') }}">Log in</a>
 
-                                         @if (Route::has('register'))
-                                             <a href="{{ route('register') }}">Register</a>
-                                         @endif
 
-                                     @endauth
+
+                                @endauth
                                  @endif
                              </li>
 
