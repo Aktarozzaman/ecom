@@ -9,7 +9,7 @@
     <title>Better Think BD|Registration</title>
     <link rel="stylesheet" href="{{ asset('signuppage/Css/from.css') }}">
     <link rel="stylesheet" href="{{ asset('signuppage/Css/bootstrap.min.css') }}">
-   
+
 </head>
 
 <body>
@@ -29,7 +29,7 @@
                     <ul>
                         <li><a href="{{ route('register') }}">Sign up</a></li>
                         <li><a href="{{ route('login') }}">Log in</a></li>
-                       
+
                     </ul>
                 </div>
             </div>
@@ -42,29 +42,82 @@
                     <p>Sign up to get your digital <br> Discount Card</p>
                 </div>
                 <div class="all-from">
-                    <form>
+                    
+                    <form method="POST" action="{{ route('register') }}">
+
+                        @csrf
                         <div class="over-form">
                             <div class="right-form">
-                                <h5>New ID</h5>
-                                <input type="id" class="input-box" placeholder="0012-2022-0000-1001">
-
                                 <h5>Name<sup>*</sup></h5>
-                                <input type="text" class="input-box" placeholder="">
+                                <input id="name" type="text"
+                                    class="input-box @error('name') is-invalid @enderror" name="name"
+                                    value="{{ old('name') }}" required autocomplete="name" autofocus
+                                    placeholder="Enter  user Name">
+
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
+
+                                <h5>Email<sup>*</sup></h5>
+
+                                <input id="email" type="email"
+                                    class="input-box @error('email') is-invalid @enderror" name="email"
+                                    value="{{ old('email') }}" required autocomplete="email"
+                                    placeholder="Enter  Email ">
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
 
                                 <h5>password<sup>*</sup></h5>
-                                <input type="password" class="input-box" placeholder="">
+                                <input id="password" type="password"
+                                    class="input-box @error('password') is-invalid @enderror" name="password" required
+                                    autocomplete="new-password" placeholder="Enter Password ">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
 
                                 <h5>Confirm Pass<sup>*</sup></h5>
-                                <input type="password" class="input-box" placeholder="">
+
+                                <input id="password-confirm" type="password" class="input-box"
+                                    name="password_confirmation" required autocomplete="new-password"
+                                    placeholder="Enter Confirm password">
 
                                 <h5>Mobile<sup>*</sup></h5>
-                                <input type="number" class="input-box" placeholder="">
+                                
+                                <input id="mobail" type="number"
+                                class="input-box @error('mobail') is-invalid @enderror" name="mobail"
+                                value="{{ old('mobail') }}" required autocomplete="mobail"
+                                placeholder="Enter  mobail Number ">
+
+                            @error('mobail')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
 
                                 <h5>NID</h5>
-                                <input type="id" class="input-box" placeholder="">
+                                <input type="number" class="input-box" placeholder="Enter Your NID">
 
                                 <h5>Date of Birth<sup>*</sup></h5>
-                                <input type="number" class="input-box" placeholder="">
+                                <input id="date" type="date"
+                                class="input-box @error('date') is-invalid @enderror" name="date"
+                                value="{{ old('date') }}" required autocomplete="date"
+                                placeholder="Enter Your DB ">
+
+                            @error('date')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
 
 
                                 <h5>Sponsor ID<sup>*</sup></h5>
@@ -81,30 +134,37 @@
                                     <p>MD.Karim Shekh</p>
                                 </div>
                             </div>
-
                             <div class="left-form">
                                 <form runat="server">
-                                    <input accept="image/*" type='file' id="imgInp" />
-                                    <img id="blah" src="#" alt="your image" height="100px" width="100px" />
+                                    <input accept="image" type="file" id="imgInp" />
+                                    <img id="blah" src="{{ asset('backend/dist/img/upload img.jpg') }}" alt="" height="100px" width="100px" />
                                 </form>
 
                                 <div class="payment-info">
                                     <h5>Bikash Number</h5>
-                                    <input type="id" class="input-box">
+                                    <input type="number" class="input-box">
                                     <h5>Bank Name</h5>
                                     <input type="id" class="input-box">
                                     <h5>Branch</h5>
                                     <input type="id" class="input-box">
-                                    <h5>Account Number<sub>*</sub></h5>
+                                    <h5>Account Number</h5>
                                     <input type="id" class="input-box">
+
                                     <div class="submit-button">
-                                        <input type="button" value="Submit">
+                                        <button type="submit" class="btn btn-primary">
+                                            {{ __('Register') }}
+                                        </button>
                                     </div>
+
+
                                 </div>
                             </div>
+
                         </div>
+
+                    </form>
                 </div>
-                </form>
+
             </div>
 
         </div>
