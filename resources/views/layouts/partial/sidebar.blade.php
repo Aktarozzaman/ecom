@@ -158,7 +158,12 @@
                             </ul>
                         </li>
 
-                    
+                        <li class="nav-item">
+                            <a href="{{ url('admin.post.icon') }}" class="nav-link ">
+                                <i class="nav-icon fas fa-user-plus"></i>
+                                <p>Change Icon</p>
+                            </a>
+                        </li>
                 </li>
 
 

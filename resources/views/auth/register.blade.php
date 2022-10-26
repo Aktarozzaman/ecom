@@ -19,7 +19,7 @@
                 <img src="{{ asset('signuppage/img/Logo_Blue_text-removebg-preview.png') }}" alt="">
                 <div class="info-item">
                     <ul>
-                        <li><a href="">Home</a></li>
+                        <li><a href="{{ url('/') }}">Home</a></li>
                         <li><a href="">Service</a></li>
                         <li><a href="">About us</a></li>
                         <li><a href="">Blog</a></li>

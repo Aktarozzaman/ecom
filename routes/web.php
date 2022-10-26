@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\subcatagoryController;
 use App\Http\Controllers\Admin\postController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\userController;
+use App\Http\Controllers\IconController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -42,4 +43,6 @@ Route::get('/post/create',[postController::class, 'create'])->name('post.create'
 Route::post('/post/store',[postController::class, 'store'])->name('post.store');
 //user croud
 Route::get('/user/details',[userController::class, 'userindex'])->name('user.index');
+
+Route::post('/addicon',[IconController::class, 'add']);
 
